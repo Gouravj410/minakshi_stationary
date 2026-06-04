@@ -42,7 +42,7 @@ const FeaturesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: index * 0.2, duration: 1, ease: easeCurve }}
-                className="bg-surface p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-soft transition-all duration-700 relative overflow-hidden group flex flex-col items-center text-center"
+                className="bg-surface p-8 md:p-12 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-soft transition-all duration-700 relative overflow-hidden group flex flex-col items-center text-center"
               >
                 {/* Decorative background element */}
                 <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-gradient-to-bl from-orange-50/80 to-transparent rounded-full group-hover:scale-150 transition-transform duration-1000 ease-out opacity-0 group-hover:opacity-100 z-0 pointer-events-none"></div>

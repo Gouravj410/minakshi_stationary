@@ -22,7 +22,7 @@ const VisitUsSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: easeCurve }}
-            className="w-full lg:w-1/2 h-96 lg:h-auto min-h-[500px] relative"
+            className="w-full lg:w-1/2 h-80 min-h-[300px] md:min-h-[500px] lg:h-auto relative"
           >
             {/* Embedded Google Map */}
             <iframe 
@@ -44,7 +44,7 @@ const VisitUsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: easeCurve }}
-            className="w-full lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center bg-surface relative z-10"
+            className="w-full lg:w-1/2 p-8 md:p-12 lg:p-20 flex flex-col justify-center bg-surface relative z-10"
           >
             <h3 className="text-3xl font-serif text-text mb-12">Store Information</h3>
             

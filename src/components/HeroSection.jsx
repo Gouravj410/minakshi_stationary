@@ -15,24 +15,44 @@ const HeroSection = () => {
           transition={{ duration: 1.2, ease: easeCurve }}
           className="flex flex-col items-center"
         >
-          {/* Ganesh Image Container */}
-          <div className="relative mb-12">
-            <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl scale-150"></div>
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-white/80 backdrop-blur-xl shadow-glow flex items-center justify-center p-6 border border-white relative z-10">
-              <img 
+          {/* Ganesh Image Container with Spotlight */}
+          <motion.div 
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, ease: easeCurve }}
+            className="relative mb-14 mt-4"
+          >
+            {/* Animated Spotlight/Glow */}
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.8, 0.5] 
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              className="absolute inset-0 bg-primary/20 rounded-full blur-[40px] scale-150 z-0"
+            ></motion.div>
+            
+            <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-white/80 backdrop-blur-xl shadow-glow flex items-center justify-center p-8 border border-white/60 relative z-10">
+              <motion.img 
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 src="/Images/1.png" 
                 alt="Ganesh Logo" 
-                className="w-full h-full object-contain drop-shadow-md"
+                className="w-full h-full object-contain drop-shadow-2xl"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = 'https://placehold.co/400x400/fff/C2410C?text=Ganesh';
                 }}
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-text mb-6 leading-tight max-w-4xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-text mb-6 leading-tight max-w-4xl px-4">
             Minakshi Varieties <br className="hidden md:block" />
             <span className="text-primary italic">& Stationery</span>
           </h1>

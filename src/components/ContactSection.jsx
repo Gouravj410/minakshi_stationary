@@ -35,7 +35,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 1.2, ease: easeCurve }}
-          className="bg-surface rounded-[2rem] shadow-soft border border-gray-100 p-10 md:p-16 relative overflow-hidden"
+          className="bg-surface rounded-[2rem] shadow-soft border border-gray-100 p-6 md:p-16 relative overflow-hidden"
         >
           {/* Subtle inner line decoration */}
           <div className="absolute top-4 left-4 right-4 bottom-4 border border-gray-50 rounded-2xl pointer-events-none"></div>

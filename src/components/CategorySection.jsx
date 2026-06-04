@@ -35,7 +35,7 @@ const CategorySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: index * 0.1, duration: 0.8, ease: easeCurve }}
-                className="group p-10 rounded-3xl bg-surface border border-gray-100 hover:shadow-soft-hover transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
+                className="group p-6 md:p-10 rounded-3xl bg-surface border border-gray-100 hover:shadow-soft-hover transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className="w-16 h-16 rounded-full bg-orange-50/50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 ease-out">
                   <Icon className="w-7 h-7 text-primary opacity-80" strokeWidth={1.5} />
