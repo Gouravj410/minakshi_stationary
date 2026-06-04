@@ -22,7 +22,7 @@ const StorySection = () => {
             
             <div className="relative rounded-[2rem] overflow-hidden shadow-soft aspect-[4/5] md:aspect-[3/4] z-10 bg-white">
               <img 
-                src="/Images/store-front.jpeg" 
+                src={`${import.meta.env.BASE_URL}Images/store-front.jpeg`} 
                 alt="Minakshi Varieties Store Front" 
                 className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
                 onError={(e) => {

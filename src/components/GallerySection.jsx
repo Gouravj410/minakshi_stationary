@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/Images/store-front.jpeg', alt: 'Store Front View' },
-  { src: '/Images/gallery-1.jpeg', alt: 'Gallery Image 1' },
-  { src: '/Images/gallery-2.jpeg', alt: 'Gallery Image 2' },
-  { src: '/Images/gallery-3.jpeg', alt: 'Gallery Image 3' },
+  { src: 'Images/store-front.jpeg', alt: 'Store Front View' },
+  { src: 'Images/gallery-1.jpeg', alt: 'Gallery Image 1' },
+  { src: 'Images/gallery-2.jpeg', alt: 'Gallery Image 2' },
+  { src: 'Images/gallery-3.jpeg', alt: 'Gallery Image 3' },
 ];
 
 const fallbackImages = [
@@ -42,7 +42,7 @@ const GallerySection = () => {
               onClick={() => setSelectedImage(img)}
             >
               <img
-                src={img.src}
+                src={`${import.meta.env.BASE_URL}${img.src}`}
                 alt={img.alt}
                 className="w-full h-auto object-cover transform transition-transform duration-[800ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
                 onError={(e) => {
@@ -82,7 +82,7 @@ const GallerySection = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.5, ease: easeCurve }}
-              src={selectedImage.src}
+              src={`${import.meta.env.BASE_URL}${selectedImage.src}`}
               alt={selectedImage.alt}
               className="max-w-full max-h-full rounded-md shadow-2xl"
               onClick={(e) => e.stopPropagation()}

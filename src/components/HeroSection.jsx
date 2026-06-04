@@ -40,7 +40,7 @@ const HeroSection = () => {
               <motion.img 
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                src="/Images/1.png" 
+                src={`${import.meta.env.BASE_URL}Images/1.png`} 
                 alt="Ganesh Logo" 
                 className="w-full h-full object-contain drop-shadow-2xl"
                 onError={(e) => {
