@@ -3,63 +3,61 @@ import { Store, Phone, MapPin, Globe, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2A0E05] text-white pt-24 pb-12 border-t border-primary/20">
+    <footer className="bg-[#1A0A05] text-surface pt-24 pb-12 border-t-[8px] border-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-12 md:mb-16">
           
           {/* Brand */}
           <div className="lg:pr-8">
-            <div className="flex items-center gap-2 mb-8">
-              <span className="font-serif font-bold text-3xl text-white tracking-wide">Minakshi</span>
+            <div className="flex items-center gap-2 mb-6 md:mb-8">
+              <span className="font-serif font-bold text-2xl md:text-3xl text-primary tracking-wide drop-shadow-[0_0_10px_rgba(194,65,12,0.3)]">Minakshi</span>
             </div>
-            <p className="text-white/60 mb-8 leading-relaxed font-light">
+            <p className="text-surface/70 mb-8 leading-relaxed font-light text-sm md:text-base">
               Your premium neighborhood variety and stationery store. Curated essentials and gifts under one roof.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-all duration-300">
-                <Globe className="w-5 h-5" strokeWidth={1.5} />
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface/10 flex items-center justify-center text-surface hover:bg-primary hover:scale-110 transition-all duration-300 shadow-lg border border-surface/5">
+                <Globe className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-primary hover:text-white transition-all duration-300">
-                <MessageCircle className="w-5 h-5" strokeWidth={1.5} />
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface/10 flex items-center justify-center text-surface hover:bg-primary hover:scale-110 transition-all duration-300 shadow-lg border border-surface/5">
+                <MessageCircle className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm tracking-[0.2em] uppercase font-semibold mb-8 text-primary">Quick Links</h4>
-            <ul className="space-y-4">
-              <li><a href="#categories" className="text-white/60 hover:text-white transition-colors font-light">Collections</a></li>
-              <li><a href="#story" className="text-white/60 hover:text-white transition-colors font-light">Our Heritage</a></li>
-              <li><a href="#gallery" className="text-white/60 hover:text-white transition-colors font-light">Store Tour</a></li>
-              <li><a href="#visit" className="text-white/60 hover:text-white transition-colors font-light">Visit Us</a></li>
+            <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase font-semibold mb-6 md:mb-8 text-primary">Quick Links</h4>
+            <ul className="space-y-3 md:space-y-4">
+              <li><a href="#gallery" className="text-surface/70 hover:text-primary transition-colors font-light text-sm md:text-base">Store Tour</a></li>
+              <li><a href="#categories" className="text-surface/70 hover:text-primary transition-colors font-light text-sm md:text-base">Collections</a></li>
             </ul>
           </div>
 
           {/* Categories */}
           <div>
-            <h4 className="text-sm tracking-[0.2em] uppercase font-semibold mb-8 text-primary">Categories</h4>
-            <ul className="space-y-4">
-              <li className="text-white/60 font-light">Premium Stationery</li>
-              <li className="text-white/60 font-light">Toys & Gifts</li>
-              <li className="text-white/60 font-light">Cosmetics</li>
-              <li className="text-white/60 font-light">Daily Essentials</li>
+            <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase font-semibold mb-6 md:mb-8 text-primary">Categories</h4>
+            <ul className="space-y-3 md:space-y-4">
+              <li className="text-surface/70 font-light text-sm md:text-base">Premium Stationery</li>
+              <li className="text-surface/70 font-light text-sm md:text-base">Toys & Gifts</li>
+              <li className="text-surface/70 font-light text-sm md:text-base">Cosmetics</li>
+              <li className="text-surface/70 font-light text-sm md:text-base">Daily Essentials</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm tracking-[0.2em] uppercase font-semibold mb-8 text-primary">Contact</h4>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-4 text-white/60 font-light">
+            <h4 className="text-xs md:text-sm tracking-[0.2em] uppercase font-semibold mb-6 md:mb-8 text-primary">Contact</h4>
+            <ul className="space-y-4 md:space-y-6">
+              <li className="flex items-start gap-4 text-surface/70 font-light text-sm md:text-base">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <span className="leading-relaxed">Minakshi Varieties & Stationery,<br/>Main Market Road, Pune</span>
               </li>
-              <li className="flex items-center gap-4 text-white/60 font-light">
+              <li className="flex items-center gap-4 text-surface/70 font-light text-sm md:text-base">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={1.5} />
                 <span>+91 00000 00000</span>
               </li>
-              <li className="flex items-center gap-4 text-white/60 font-light">
+              <li className="flex items-center gap-4 text-surface/70 font-light text-sm md:text-base">
                 <Store className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={1.5} />
                 <span>9:00 AM - 9:30 PM</span>
               </li>
@@ -68,12 +66,12 @@ const Footer = () => {
 
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm font-light">
+        <div className="border-t border-surface/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-surface/50 text-xs md:text-sm font-light text-center md:text-left">
             © {new Date().getFullYear()} Minakshi Varieties. All rights reserved.
           </p>
-          <p className="text-white/40 text-sm flex items-center font-light">
-            Designed with <span className="text-primary mx-2">♥</span> for local business
+          <p className="text-surface/50 text-xs md:text-sm flex items-center font-light">
+            Designed with <span className="text-primary mx-2 hover:scale-125 transition-transform duration-300">♥</span> for local business
           </p>
         </div>
       </div>
