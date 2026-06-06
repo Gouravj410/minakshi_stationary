@@ -71,7 +71,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Minakshi Varieties. All rights reserved.
           </p>
           <p className="text-surface/50 text-xs md:text-sm flex items-center font-light">
-            Designed with <span className="text-primary mx-2 hover:scale-125 transition-transform duration-300">♥</span> for local business
+            Designed by <span className="font-medium text-surface/80 mx-1">KrGo Software Solutions</span> with <span className="text-primary mx-2 hover:scale-125 transition-transform duration-300">♥</span>
           </p>
         </div>
       </div>

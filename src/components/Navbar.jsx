@@ -11,15 +11,20 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <a href="#" className="flex-shrink-0 flex flex-col justify-center">
-              <span className="font-serif font-bold text-2xl text-text tracking-wide leading-none mb-1">Minakshi</span>
+              <motion.span 
+                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="font-serif font-bold text-2xl tracking-wide leading-none mb-1 bg-gradient-to-r from-primary via-orange-400 to-primary bg-[length:200%_auto] text-transparent bg-clip-text"
+              >
+                Minakshi
+              </motion.span>
               <span className="hidden sm:block text-[10px] uppercase tracking-[0.2em] font-semibold text-primary/80">Varieties & Stationery</span>
             </a>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
-            <a href="#gallery" className="text-text/70 hover:text-primary transition-colors text-sm uppercase tracking-wider font-semibold">Tour</a>
-            <a href="#categories" className="text-text/70 hover:text-primary transition-colors text-sm uppercase tracking-wider font-semibold">Collections</a>
+            <a href="#collections" className="text-text/70 hover:text-primary transition-colors text-sm uppercase tracking-wider font-semibold">Collections</a>
             <a href="tel:+910000000000" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary-hover hover:shadow-soft transition-all duration-300 transform hover:-translate-y-0.5 text-sm">
               <PhoneCall className="w-4 h-4 mr-2" />
               Call Now
@@ -46,8 +51,7 @@ const Navbar = () => {
           className="md:hidden bg-surface border-b border-gray-100 absolute w-full"
         >
           <div className="px-6 pt-4 pb-8 space-y-2 shadow-soft">
-            <a href="#gallery" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-sm uppercase tracking-wider font-semibold text-text hover:text-primary hover:bg-orange-50/50 rounded-xl transition-colors">Tour</a>
-            <a href="#categories" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-sm uppercase tracking-wider font-semibold text-text hover:text-primary hover:bg-orange-50/50 rounded-xl transition-colors">Collections</a>
+            <a href="#collections" onClick={() => setIsOpen(false)} className="block px-4 py-4 text-sm uppercase tracking-wider font-semibold text-text hover:text-primary hover:bg-orange-50/50 rounded-xl transition-colors">Collections</a>
             <a href="tel:+910000000000" className="mt-6 w-full flex items-center justify-center px-6 py-4 border border-transparent text-sm font-semibold rounded-full text-white bg-primary hover:bg-primary-hover">
               <PhoneCall className="w-5 h-5 mr-2" />
               Call Now

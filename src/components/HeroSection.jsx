@@ -27,22 +27,36 @@ const HeroSection = () => {
             transition={{ duration: 1.5, ease: easeCurve }}
             className="relative mb-12 md:mb-16 mt-4 group"
           >
-            {/* Animated Spotlight/Glow */}
+            {/* Animated Spotlight/Glow Headlights Effect */}
             <motion.div 
-              animate={{ 
-                scale: [1, 1.3, 1],
-                opacity: [0.6, 0.9, 0.6],
-                rotate: [0, 90, 0]
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full blur-[40px] scale-[1.8] md:scale-[2.2] z-0"
+              style={{
+                background: 'conic-gradient(from 0deg, transparent 0%, rgba(194,65,12,0.15) 20%, rgba(194,65,12,0.8) 40%, transparent 50%, transparent 50%, rgba(194,65,12,0.15) 70%, rgba(194,65,12,0.8) 90%, transparent 100%)'
               }}
-              transition={{ 
-                duration: 6, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-              className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-accent/40 rounded-full blur-[50px] scale-[1.8] z-0"
             ></motion.div>
+
+            {/* Om Symbols */}
+            <motion.div 
+              animate={{ rotate: [360, 0] }}
+              transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 z-0 pointer-events-none"
+            >
+              {[...Array(8)].map((_, i) => (
+                <div 
+                  key={i}
+                  className="absolute top-1/2 left-1/2 -mt-4 -ml-4 text-primary/40 font-serif text-3xl drop-shadow-md origin-center"
+                  style={{
+                    transform: `rotate(${i * 45}deg) translateY(-6.5rem) rotate(-${i * 45}deg)`,
+                  }}
+                >
+                  ॐ
+                </div>
+              ))}
+            </motion.div>
             
-            <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-surface/80 backdrop-blur-xl shadow-glow flex items-center justify-center p-8 border border-primary/20 relative z-10 group-hover:border-primary/40 transition-colors duration-500">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-surface/80 backdrop-blur-xl shadow-glow flex items-center justify-center p-8 border border-primary/20 relative z-10 group-hover:border-primary/40 transition-colors duration-500">
               <motion.img 
                 animate={{ y: [-8, 8, -8] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -58,8 +72,15 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-text mb-6 leading-tight max-w-4xl px-4 drop-shadow-sm">
-            Minakshi Varieties <br className="hidden md:block" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-6 leading-tight max-w-4xl px-4 drop-shadow-sm">
+            <motion.span 
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              className="bg-gradient-to-r from-text via-primary to-text bg-[length:200%_auto] text-transparent bg-clip-text inline-block pb-2"
+            >
+              Minakshi Varieties
+            </motion.span>
+            <br className="hidden md:block" />
             <span className="text-primary italic drop-shadow-[0_0_20px_rgba(194,65,12,0.2)]">& Stationery</span>
           </h1>
           

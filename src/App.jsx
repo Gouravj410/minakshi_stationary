@@ -1,8 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import CategorySection from './components/CategorySection';
-import GallerySection from './components/GallerySection';
+import CollectionsGallery from './components/CollectionsGallery';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -12,8 +11,7 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
-        <GallerySection />
-        <CategorySection />
+        <CollectionsGallery />
         <ContactSection />
       </main>
       <Footer />
